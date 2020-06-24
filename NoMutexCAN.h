@@ -25,10 +25,9 @@ SOFTWARE.
 #ifndef NOMUTEXCAN_H
 #define NOMUTEXCAN_H
 
-#include "mbed.h"
+#include "CAN.h"
 
-
-class NoMutexCAN: public CAN {
+class NoMutexCAN: public mbed::CAN {
   public:
     NoMutexCAN(PinName rd, PinName td): CAN(rd, td) {}
     NoMutexCAN(PinName rd, PinName td, int hz): CAN(rd, td, hz) {}
